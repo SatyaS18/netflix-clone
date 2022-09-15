@@ -1,7 +1,16 @@
 import styled from "styled-components/macro";
 
+export const Item = styled.div`
+  display: flex;
+  border-bottom: 8px solid #222;
+  padding: 50px 0;
+  color: white;
+  overflow: hidden;
+`;
+
 export const Inner = styled.div`
   display: flex;
+  color: black;
   align-items: center;
   flex-direction: ${({ direction }) => direction};
   justify-content: space-between;
@@ -12,6 +21,42 @@ export const Inner = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
   }
+`;
+
+export const Pane = styled.div`
+  width: 50%;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0 45px;
+    text-align: center;
+  }
+`;
+
+export const Title = styled.h1`
+  font-size: 50px;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+
+  @media (max-width: 600px) {
+    font-size: 36px;
+  }
+`;
+
+export const SubTitle = styled.h2`
+  font-size: 25px;
+  font-weight: normal;
+  line-height: normal;
+
+  @media (max-width: 600px) {
+    font-size: 15px;
+    font-weight: normal;
+  }
+`;
+
+export const Image = styled.img`
+  max-width: 100%;
+  height: auto;
 `;
 
 export const Container = styled.div``;
