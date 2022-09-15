@@ -4,13 +4,14 @@ export const Item = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
   padding: 50px 0;
-  color: white;
+
   overflow: hidden;
 `;
 
 export const Inner = styled.div`
   display: flex;
-  color: black;
+  background-color: black;
+  color: white;
   align-items: center;
   flex-direction: ${({ direction }) => direction};
   justify-content: space-between;
@@ -59,4 +60,10 @@ export const Image = styled.img`
   height: auto;
 `;
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  @media (max-width: 1000px) {
+    ${Item}: last-of-type h2 {
+      margin-bottom: 50px;
+    }
+  }
+`;
